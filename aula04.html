@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula04</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //---------> operadores lógicos, relacionais e ternario <---------------
+    // são eles >(maior que), (menor que)<, (maior ou igual)>=, (menor ou igual) <=, (diferente)!=, == (igual);
+    // esse tipo de operador recebe um valor booleano (true or false);
+    //para que isso ocorra precisamos de 2 valores; 
+    //vamos dar um exemplo;
+    var numero1 = Number(window.prompt(`Digite um numero`));
+    alert(`O número digitado foi ${numero1}`);
+    var numero2 = Number(window.prompt(`Digite um segundo numero para fazermos a realação`));
+    alert(`O segundo numero digitado foi ${numero2}`);
+
+    //fazendo as relações;
+    var resultado = numero1 > numero2;
+    alert(`O primeiro número é maior que o segundo digitado? ${resultado}`);
+    // resultado exibido na tela
+    var resultado = numero1 < numero2;
+    alert(`O segundo número é maior que o primeiro? ${resultado}`);
+    // resultado exibido na tela
+    var resultado = numero1 >= numero2;
+    alert(`O primeiro numero é maior ou igual ao segundo? ${resultado}`);
+    // resultado exibido na tela
+    var resultado = numero1 <= numero2;
+    alert (`O primeiro numero é menor ou igual ao segundo? ${resultado}`);
+    // resultado exibido na tela
+    var resultado = numero1 != numero2; 
+    alert(`O primeiro número é diferente do segundo? ${resultado}`);
+    // resultado exibido na tela
+    var resultado = numero1 == numero2;
+    alert(`O primeiro numero é igual ao segundo? ${resultado}`);
+    // resultado exibido na tela
+
+    //---------> operadores lógicos <---------------
+    //são eles: !(NÃO), &&(E), ||(OU);
+    alert(`Agora vamos fazer operações logicas`);
+    var idade = Number(window.prompt(`Qual a sua idade?`));
+    alert(`Se sua idade for menor que 18 vc é de MENOR se não é MAIOR`);
+    if(idade >= 18){ // estrutura de condição;
+        alert(`Você tem ${idade}, você é de MAIOR`);
+    } else {
+        alert(`Você tem ${idade}, você é de MENOR`);
+    }
+    
+    
+    
+
+
+</script>
+</html>
