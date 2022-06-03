@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula03</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //---------------> Operadores númericos <-------------------
+    var n = 3 
+    var n2 = Number(window.prompt("Digite um número "));
+    var divisao = n2 / 2;
+    var multiplicação = n2 * 2;
+    var soma = n2 + 2;
+    var subtração = n2 - 2;
+    var elevado = n2 ** 2;
+    var resto = n2 % 2;
+// ----------> ordem de precedencia<-------------------
+// primeiro -------> ()
+// segundo -------> ** (potencia)
+// terceiro -------> *, /, % (multiplicação, divisao e resto) ---> o que vier primeiro
+// quarto -------> +, - (soma e subtração) ---> o que vier primeiro
+
+    alert (`O numero digitado foi ${n2}`);
+    alert(`Esse numero dividido por 2 fica assim ${divisao}`);
+    alert (`O numero multiplicado por 2 fica assim ${multiplicação}`);
+    alert (`esse número somado com 2 fica assim ${soma}`);
+    alert(`esse numero subtraido por 2 fica assim ${subtração}`);
+    alert (`Esse número elevado ao quadrado fica assim ${elevado}`);
+    alert(`O restante desse numero na divisao é ${resto}`);
+    alert (`Agora vamos fazer a auto-atribuição`);
+
+// ----------> auto-atribuição<-------------------
+
+    var auto_atribuição = Number(window.prompt("Digite um numero"));
+    // perceba que o valor digitado foi guardado na var auto_atribuição;
+    alert(`Agora o valor que foi recebido na var auto_atribuição recebe +3 = ${auto_atribuição + 3}`);
+    var auto_atribuição = auto_atribuição + 3;
+    //-----> agora a var vale numero digitado + 3;
+
+    alert(`exibindo a var ${auto_atribuição}`);
+
+    var auto_atribuição = auto_atribuição - 5; // ele vai fazer o que esta depois do = primeiro ou seja (valor digitado - 5) vai ser o novo valor da var
+    alert(`exibindo a var com -5 = ${auto_atribuição}`);
+    var auto_atribuição = auto_atribuição + 5; // o novo valor recebeu + 5
+    alert(`O novo valor da var recebeu +5 então fica assim = ${auto_atribuição}`);
+
+    //----------> Podemos Simplificar <-------------------
+   
+    // Por exemplo:
+    // var N = 3 
+    // var N += 4 ------> a var N ta recebendo o valor dela + 4 ou seja N agora vale 7;
+
+    var N = 3
+    N += 4;
+    alert(`o valor de N é ${N}`);
+
+     //----------> Podemos também incrementar <-------------------
+
+     var x = 5;
+     alert(`a var X recebe 5, utilizando o x++ fica assim`);
+     // caso eu queira somar +1 ou subtrair -1 podemos usar da seguinte forma
+     x++
+     alert(`o valor de X é ${x}`);
+     x-- 
+     alert(`utilizando x-- o valor retorna: ${x}`);
+
+
+</script>
+</html>

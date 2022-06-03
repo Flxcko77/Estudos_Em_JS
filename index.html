@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estudos em Js</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>my name is guilherme vieira</p>
+</body>
+<script>
+    // -----------> converção de string para number <---------------------
+   var numero1 = Number.parseFloat(window.prompt("digite um numero:")); //float para numero real    
+   var numero2 = Number.parseFloat(window.prompt("digite outro numero:")); // int para numero inteiro   
+   var soma = numero1 + numero2; // Usar somente NUMBER o javascript consegue saber se é real ou inteiro
+   alert ("a soma dos numeros são: " + soma); // sinal de + com duas strings faz concatenação
+   // sinal de + com 2 numeros faz a soma
+
+   // -------------> conversão de number para string <------------
+   var numero4 = Number(window.prompt("Agora vamos reverter seu numero para string, digite um numero:"));
+   var numero5 = Number(window.prompt("digite outro numero:"));
+   var resultado = numero4 + numero5; 
+   alert ("os numeros como string ficam assim: " + numero4 + numero5.toString()); // podemos usar tambem string(nome_Da_var);
+
+   //------------> formatação de strings <----------
+   var nome = window.prompt("Qual seu nome?");
+   var idade = window.prompt ("Qual a sua idade?");
+   var hobbie = window.prompt ("qual seu hobbie favorito?");
+   alert("O " + nome + " com idade de " + idade + " Gosta de fazer " + hobbie ); // dessa forma fica muito longo e perde tempo;
+
+   //-------------> templates strings <-------------------
+   window.alert("Vamos utilizar um metodo mais ágil");
+   alert(`O ${nome} com idade de ${idade} gosta de ${hobbie}`); // a utilização de crazes `` deixa o codigo mais limpo;
+
+    // podemos também jogar as variaveis com string para as seguintes formatações:
+
+    alert(nome.toUpperCase()); //Para deixar as letras MAIUSCULAS;
+    alert(nome.toLowerCase()); //Para deixar tudo minusculo;
+    alert(nome.length()); //Para decretar quantos caracteres a string tem;
+</script>
+</html>
