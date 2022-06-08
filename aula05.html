@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div#Centralizar{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: rgb(43, 40, 40);
+        }
+        div#DOM{
+            background-color: blueviolet;
+            color: white;
+            width: 300px;
+            height: 300px;
+        }
+        div#DOM2{
+            background-color: rgb(43, 226, 104);
+            color: white;
+            width: 300px;
+            height: 300px;
+        }
+        .dom{
+            margin-right: 40px;
+            text-align: center;
+            line-height: 300px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <div id="Centralizar">
+        <div id="DOM" class="dom" onclick="clicar()" onmouseenter="Entrar()" onmouseout="sair()">Hello world!</div>
+        <div id="DOM2" class="dom"> Hello World2</div>
+    </div>
+    <script>
+        //uma function em js é um conjunto de codigos que vão ser executadas apenas quando o evento ocorrer
+        // geralmente os nomes das functions são nomes de evntos ("function clicar(parametro) { bloco }")
+        //--------> vamos observar <---------------
+        var mudar = window.document.getElementById('DOM') // <-------- a var fora da function serve para todos
+
+        function clicar() {
+    // var mudar = window.document.getElementById('DOM') <----- dentro da function só serveria para ela apenas
+           mudar.innerText = 'clicou!'
+           mudar.style.background =' rgb(43, 226, 104)'
+        }
+        function Entrar() {
+            mudar.innerText = 'entrou'
+        }
+        function sair () {
+            mudar.innerText = 'saiu'
+            mudar.style.background =' blueviolet'
+        }
+
+        //além desse tipo, podemos disparar as functions atraves de listernes
+        //--------> vamos observar <---------------
+        var mudar2 = window.document.getElementById('DOM2')
+        mudar2.addEventListener('click', clicar) // <------- perceba que estou reutilizando as functions de cima 
+        mudar2.addEventListener('mouseenter', Entrar) // <----- os comandos estão sendo disparados na 2ª div porém o resultado esta na primeira;
+        mudar2.addEventListener('mouseout', sair)
+
+    </script>
+</body>
+</html>
